@@ -27,8 +27,7 @@ labels <- 0;
 ii <- 0;
 
 #------------------------------Binary-Relevance---------------------------------
-# Boosting with Decision Trees 
-library(adabag)
+
 numb.labels <- ncol(labels.tr)
 N.tr <- nrow(x.train);
 N.te <- nrow(x.test);
@@ -41,7 +40,8 @@ x.te <- data.frame(data.matrix(x.test));
 x.train <- 0;
 x.test <- 0;
 
-# Running Independent Boosting for Each Label
+# Running Decisoin Trees Under Boosting for Each Label
+library(adabag)
 for(i in 1:numb.labels){
 	yhat <- factor(labels.tr[,i]);
 	train.dat <- cbind(x.tr,yhat);	
@@ -58,3 +58,4 @@ for(i in 1:numb.labels){
 
 mean(pre.tr!= labels.tr)
 mean(pre.te!= labels.te)
+
