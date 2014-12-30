@@ -1,7 +1,6 @@
 Text-Classification-Problem
 ===========================
-I have solved a text classification (TC) problem posted on Kaggle. For more information on the 
-problem see: 
+For more information on the text classification (TC) problem see: 
 https://www.kaggle.com/c/tradeshift-text-classification
 
 I have also written an article on this TC problem (see issues). In the article I review some of the 
